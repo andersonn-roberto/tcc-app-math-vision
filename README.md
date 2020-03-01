@@ -1,12 +1,12 @@
-# Trabalho de Conclusão de Curso - Análise e Desenvolvimento de Sistemas
-# FATEC Lins - Professor Antonio Seabra
+####Trabalho de Conclusão de Curso - Análise e Desenvolvimento de Sistemas
+####FATEC Lins - Professor Antonio Seabra
 
-# Aplicativo mobile para usuários com visão subnormal objetivando plotagem de funções e história da matemática
+Aplicativo mobile para usuários com visão subnormal objetivando plotagem de funções e história da matemática
 
-# Alunos
+#####Alunos:
 Anderson Roberto de Oliveira
 Luiz Henrique Mitsumassa Kanada
 
-# Orientadores
+#####Orientadores:
 Professora Dra. Adriana de Bortoli
 Professor Me. Felipe Maciel Rodrigues
