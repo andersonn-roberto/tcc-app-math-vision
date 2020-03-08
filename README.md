@@ -12,5 +12,5 @@ Professora Dra. Adriana de Bortoli\
 Professor Me. Felipe Maciel Rodrigues
 
 ##### Bibliotecas JS utilizadas
-[Math.js](https://mathjs.org/)
+[Math.js](https://mathjs.org/)\
 [Plotly](https://plot.ly/javascript/)
