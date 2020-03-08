@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
+
 <body>
     <div style="text-align: center;">
-        <h2>Aplicativo mobile para usuários com visão subnormal objetivando plotagem de funções e história da matemática</h2>
+        <h2>Aplicativo mobile para usuários com visão subnormal objetivando plotagem de funções e história da matemática
+        </h2>
         <br>
-        <canvas id="chart" width="400" height="400"></canvas>
+        <form id="form">
+            <label for="eq">Equação:</label>
+            <input type="text" id="eq" value="6 * x ^ 2 + 20 * x" />
+            <input type="submit" value="Plotar" />
+        </form>
+
+        <div id="plot"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://unpkg.com/mathjs@6.6.1/dist/math.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
