@@ -1,5 +1,6 @@
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+select {
   width: 300px;
 }
 
