@@ -5,7 +5,7 @@ function draw() {
     const expr = math.compile(expression);
 
     // evaluate the expression repeatedly for different values of x
-    const xValues = math.range(-100, 100, 0.5).toArray();
+    const xValues = math.range(-1000, 1000, 0.5).toArray();
     const yValues = xValues.map(function (x) {
       return expr.evaluate({
         x: x,
