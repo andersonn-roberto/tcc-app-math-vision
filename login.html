@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Math Vision Master</title>
+    <link rel="stylesheet" href="css/site.css" />
   </head>
   <body>
     <div
@@ -21,9 +22,14 @@
     </div>
 
     <script>
-      var btn = document.querySelector("#btn-login");
-      btn.addEventListener("click", function () {
-        window.location.assign(window.location.origin);
+      var btnLogin = document.querySelector("#btn-login");
+      var txtEmail = document.querySelector("#email");
+      var txtSenha = document.querySelector("#senha");
+      btnLogin.addEventListener("click", function () {
+        if (txtEmail.value != '' && txtSenha.value != '') {
+          window.localStorage.setItem("ultimo_login", txtEmail.value);
+          window.location.assign(window.location.origin);
+        }
       });
     </script>
   </body>

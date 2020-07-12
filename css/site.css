@@ -1,10 +1,14 @@
 input[type="text"],
 input[type="password"],
-select {
+input[type="submit"],
+select,
+button {
   width: 300px;
 }
 
-input {
+input,
+select,
+button {
   padding: 6px;
 }
 
@@ -21,4 +25,10 @@ form {
 
 img {
   max-width: 80%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
