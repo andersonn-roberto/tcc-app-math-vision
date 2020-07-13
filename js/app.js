@@ -25,9 +25,10 @@ function draw() {
     };
     const data = [trace1];
     const layout = {
-      plot_bgcolor: "rgb(0,0,0,0)",
+      xaxis: { range: [-100, 100] },
+      yaxis: { range: [-100, 100] },
     };
-    Plotly.newPlot("plot", data);
+    Plotly.newPlot("plot", data, layout);
   } catch (err) {
     console.error(err);
     alert(err);
@@ -35,24 +36,22 @@ function draw() {
 }
 
 var show = function (elem) {
-	elem.style.display = 'block';
+  elem.style.display = "block";
 };
 
 var hide = function (elem) {
-	elem.style.display = 'none';
+  elem.style.display = "none";
 };
 
 var toggle = function (elem) {
+  // If the element is visible, hide it
+  if (window.getComputedStyle(elem).display === "block") {
+    hide(elem);
+    return;
+  }
 
-	// If the element is visible, hide it
-	if (window.getComputedStyle(elem).display === 'block') {
-		hide(elem);
-		return;
-	}
-
-	// Otherwise, show it
-	show(elem);
-
+  // Otherwise, show it
+  show(elem);
 };
 
 const ultimoLogin = window.localStorage.getItem("ultimo_login");
@@ -117,12 +116,12 @@ btnSair.addEventListener("click", function () {
 
 btnShowHide.addEventListener("click", function () {
   // Get the content
-	var content = document.querySelector("#configuracoes");
-	if (!content) return;
+  var content = document.querySelector("#configuracoes");
+  if (!content) return;
 
-	// Toggle the content
-	toggle(content);
-})
+  // Toggle the content
+  toggle(content);
+});
 
 draw();
 
