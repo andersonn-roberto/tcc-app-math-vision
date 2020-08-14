@@ -20,4 +20,3 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
           repository: andersonn-roberto/tcc-app-math-vision/tccappmathvision:${{ github.sha }}
-          tag_with_ref: true
