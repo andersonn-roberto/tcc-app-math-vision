@@ -1,0 +1,15 @@
+name: Create Docker image
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Build and tag tccappmathvision image
+        run: |
+          docker build -t tccappmathvision:${{ github.sha }}
