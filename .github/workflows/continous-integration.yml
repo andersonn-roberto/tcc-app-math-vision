@@ -13,3 +13,11 @@ jobs:
       - name: Build and tag tccappmathvision image
         run: |
           docker build -t tccappmathvision:${{ github.sha }} .
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: andersonn-roberto/tcc-app-math-vision/tccappmathvision:${{ github.sha }}
+          tag_with_ref: true
