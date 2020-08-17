@@ -20,6 +20,7 @@ jobs:
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | docker login https://docker.pkg.github.com -u ${{ github.actor }} --password-stdin
       - name: Tag image id
+        run: |
           docker tag ${{steps.vars.outputs.tag}} docker.pkg.github.com/andersonn-roberto/tcc-app-math-vision/tccappmathvision:${{ github.sha }}
       - name: Push to GitHub Packages
         run: |
