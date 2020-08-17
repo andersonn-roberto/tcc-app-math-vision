@@ -22,6 +22,6 @@ jobs:
       - name: Push to GitHub Packages
         run: docker push docker.pkg.github.com/andersonn-roberto/tcc-app-math-vision/tccappmathvision:${{ github.sha }}
       - name: Build latest tccappmathvision image
-        run: docker build . --file Dockerfile --tag tccappmathvision:latest
+        run: docker build . --file Dockerfile --tag docker.pkg.github.com/andersonn-roberto/tcc-app-math-vision/tccappmathvision:latest
       - name: Push the latest to GitHub Packages
         run: docker push docker.pkg.github.com/andersonn-roberto/tcc-app-math-vision/tccappmathvision:latest
